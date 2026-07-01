@@ -10,7 +10,7 @@ const steps = [
     subtitle: "AI 맞춤 분석을 위해 사업 정보가 필요합니다",
     fields: [
       { key: "region", label: "지역", type: "select", options: ["서울", "경기", "인천", "부산", "대구", "광주", "대전"] },
-      { key: "industry", label: "업종", type: "select", options: ["음식점업", "소매업", "도매업", "제조업", "서비스업", "숙박업"] },
+      { key: "industry", label: "업종", type: "select", options: ["제조업", "음식점업", "소매업", "도매업", "서비스업", "숙박업"] },
       { key: "businessType", label: "사업 형태", type: "select", options: ["개인사업자", "법인사업자"] },
       { key: "employees", label: "직원 수", type: "number", unit: "명", placeholder: "3" },
     ],
@@ -31,7 +31,7 @@ const steps = [
     subtitle: "현재 대출 정보를 입력해 주세요",
     fields: [
       { key: "creditScore", label: "NICE 신용점수", type: "number", unit: "점", placeholder: "642" },
-      { key: "totalLoan", label: "총 대출금", type: "currency", unit: "원", placeholder: "85,000,000" },
+      { key: "totalLoan", label: "총 대출금", type: "currency", unit: "원", placeholder: "72,000,000" },
       { key: "averageRate", label: "평균 금리", type: "number", unit: "%", placeholder: "12.3" },
       { key: "bank", label: "주 금융기관", type: "select", options: ["시중은행", "지방은행", "저축은행", "신협", "새마을금고", "캐피탈"] },
     ],
@@ -42,7 +42,7 @@ export default function Onboarding() {
   const router = useRouter();
   const [step, setStep] = useState(0);
   const [values, setValues] = useState<Record<string, string>>({
-    region: "서울", industry: "음식점업", businessType: "개인사업자", bank: "저축은행",
+    region: "서울", industry: "제조업", businessType: "개인사업자", bank: "저축은행",
   });
   const current = steps[step];
 

@@ -33,7 +33,7 @@ export default function Profile() {
           <div>
             <h1 className="text-xl font-bold text-gray-900">{mockUser.name}</h1>
             <p className="text-gray-500 text-sm">{mockUser.businessName}</p>
-            <p className="text-gray-400 text-xs mt-0.5">{mockUser.region} · 사업 4년 5개월</p>
+            <p className="text-gray-400 text-xs mt-0.5">{mockUser.region} · 만 {mockUser.age}세 · 사업 2년 7개월</p>
           </div>
         </div>
         <div className="grid grid-cols-3 gap-3">
